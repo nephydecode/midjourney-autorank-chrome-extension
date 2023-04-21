@@ -10,10 +10,12 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
 if(window.location.href === 'https://www.midjourney.com/app/rank-pairs/'){
   console.log('In Rank Pairing Page, started auto ranking')
+  let x = 0;
   setInterval(()=>{
 
     if(document.getElementsByClassName('flex relative grow justify-center items-center w-full h-full').length!== 0) {
       (document.getElementsByClassName('flex relative grow justify-center items-center w-full h-full')[getRandomInt(4)].children[0] as HTMLDivElement).click();   
+      console.log(`${x++} times done`)
     } else {
       location.reload();
     }
