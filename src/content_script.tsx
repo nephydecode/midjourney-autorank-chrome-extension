@@ -8,6 +8,23 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   }
 });
 
+
+const saveOptions = ( type : String ) => {
+  
+  chrome.storage.sync.get(
+    
+  )
+
+  // type === "" &&
+  // chrome.storage.sync.set(
+  //   {
+  //     clickTimes: number,
+  //     refreshTimes: number,
+  //   }
+  // );
+};
+
+
 if(window.location.href === 'https://www.midjourney.com/app/rank-pairs/'){
   console.log('In Rank Pairing Page, started auto ranking')
   let x = 0;
